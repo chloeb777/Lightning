@@ -3,6 +3,8 @@ int startY = 92;
 int endX = 220;
 int endY = 92;
 int x = (((int)(Math.random()*20))-10);
+int canvasx = 500;
+int canvasy = 200;
 //Creates a random value between -10 and 9
 
 
@@ -10,6 +12,7 @@ int x = (((int)(Math.random()*20))-10);
 void setup()
 {
   size(500,200);
+  //Unfortunatly I couldn't use the size variables for size. I still kept them because I'm using them for the while loop
   strokeWeight(1);
   background(0,0,0);
   fill(153, 222, 169);
@@ -25,7 +28,7 @@ void setup()
 }
 void draw()
 { stroke(255,255,255);
-  while((endX < 500)&&(endY <200))
+  while((endX < canvasx)&&(endY <canvasy))
   {
     //goes while the line is within the canvas
     endX = startX + (int)(Math.random()*9);
@@ -33,7 +36,7 @@ void draw()
     endY = startY +(int)(Math.random()*9)+ x;
     ////Sets ending y value to something random plus the beginning
     line(startX,startY,endX,endY);
-    //draws the line
+    //draws the line, with a random x and y ending, thus a random slope
     startX = endX;
     startY = endY;
     //starts the line where the last is ending
@@ -49,4 +52,3 @@ void mousePressed()
   endY = 92;
   //draw the line again when the mouse is presssed
 }
-
