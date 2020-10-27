@@ -3,6 +3,7 @@ int startY = 92;
 int endX = 220;
 int endY = 92;
 int x = (((int)(Math.random()*20))-10);
+//Creates a random value between -10 and 9
 
 
 
@@ -19,24 +20,33 @@ void setup()
   triangle(120, 170, 140, 185, 170, 170);
   triangle(40, 170, 60, 185, 90, 170);
   rect(140, 90, 80, 10);
+  //Image of Yoda
   
 }
 void draw()
 { stroke(255,255,255);
-  while(endX < 800)
+  while((endX < 500)&&(endY <200))
   {
+    //goes while the line is within the canvas
     endX = startX + (int)(Math.random()*9);
+    //Sets ending x value to something random plus the beginning
     endY = startY +(int)(Math.random()*9)+ x;
+    ////Sets ending y value to something random plus the beginning
     line(startX,startY,endX,endY);
+    //draws the line
     startX = endX;
     startY = endY;
+    //starts the line where the last is ending
   }
 }
 void mousePressed()
 {
   x = (((int)(Math.random()*20))-10);
+  //Create another random value between -10 and 9
   startX = 220;
   startY = 92;
   endX = 220;
   endY = 92;
+  //draw the line again when the mouse is presssed
 }
+
