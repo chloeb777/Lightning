@@ -3,9 +3,9 @@ int startY = 92;
 int endX = 220;
 int endY = 92;
 int x = (((int)(Math.random()*20))-10);
+//Creates a random value between -10 and 9
 int canvasx = 500;
 int canvasy = 200;
-//Creates a random value between -10 and 9
 
 
 
