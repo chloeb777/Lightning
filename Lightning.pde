@@ -12,7 +12,7 @@ int canvasy = 200;
 void setup()
 {
   size(500,200);
-  //Unfortunatly I couldn't use the size variables for size. I still kept them because I'm using them for the while loop
+  //Unfortunately I couldn't use the size variables for size. I still kept them because I'm using them for the while loop
   strokeWeight(1);
   background(0,0,0);
   fill(153, 222, 169);
